@@ -1,0 +1,69 @@
+@media  (max-width:600px){
+    html{
+        font-size: 40%
+        
+    }
+    img{
+        width: 1rem;
+
+    }
+    
+}
+.cardboxtitle{
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
+    
+}
+.forcast_cityname{
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    
+}
+.forcast_country{
+    font-size: 1rem;
+    
+}
+.forcast_current_img img{
+  width: 8rem;    
+}
+.current_temp{
+    font-size: .8rem;
+    font-weight: bold;
+}
+.other_conditions{
+    font-size: 1rem;
+    height: 1.4rem;
+    font-weight: bold;
+}
+.otherdays{
+    margin: 2rem auto;
+    width: auto;
+
+    
+}
+.other{
+    width:15rem;
+    
+
+}
+.date_otherDays{
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    text-align: center;
+}
+.text_otherDays{
+    height: 2rem;
+    font-size: .7rem;
+    text-align: center;
+}
+.other_temp_c{
+    font-size: 1rem;
+    text-align: center;
+}
+@media (max-width) {
+     .otherdays
+     {
+        font-size: 20%;
+     }
+}

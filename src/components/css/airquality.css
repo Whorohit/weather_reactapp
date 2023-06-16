@@ -1,0 +1,20 @@
+.air_cityname{
+    font-size: 1.5rem;
+    letter-spacing: .211rem;
+    font-weight: bold;
+}
+.air_countryname{
+    font-size: 1rem;
+    text-align: center;
+}
+.heading_air{
+    font-size: 1.8rem;
+    text-align: center;
+    
+    margin: .5rem auto;
+    padding-bottom: .3rem;
+
+}
+.airline{
+     font-size: .99rem;
+}

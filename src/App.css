@@ -1,38 +1,88 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Barlow&family=Covered+By+Your+Grace&family=Golos+Text:wght@500&family=Josefin+Sans&family=Lato:wght@400;700&family=Mukta:wght@500&family=Nerko+One&family=Phudu&family=Poller+One&family=Poppins:wght@200&family=Roboto+Slab:wght@300&family=Ubuntu&display=swap');
+
+html{
+  font-size:120%;
+}
+body {
+  background: linear-gradient();
+  /* background: linear-gradient(  518deg,rgb(67, 110, 196) ,rgb(84 202 180)35%); */
+  background-repeat: no-repeat;
+  font-family: 'Ubuntu';
+  height: 100vh;
+}
+
+.main {
+  background: linear-gradient(518deg, rgb(67, 110, 196), rgb(84 202 180)35%);
+}
+
+.smallimg{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.condition{
+  width: 18rem;
+  height: 2rem ;
+  margin:  0px  auto;
+  font-size:1rem;
+  font-weight: bold;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box{
+  text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.box img{
+   width: 10rem;
+   opacity: 80%;
+}
+.cityname{
+  letter-spacing: .2rem;
+  font-size: 1.5rem;
+}
+.sit{
+  font-size: 1rem;
+}
+.temp{
+  font-size: 1.3em;
+  
+}
+.imgbline{
+  font-size: 1.2rem;
+  font-style: normal;
+}
+.m{
+  opacity: 80%;
+}
+@media (max-width: 1380px){
+  html{
+    font-size: 80%;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1080px) {
+  html{
+    font-size: 50%;
   }
-  to {
-    transform: rotate(360deg);
+  
+}
+
+@media (max-width: 700px) {
+  html{
+    font-size: 40%;
+  }
+  html img{
+    width: 8rem ;
+  }
+}
+@media (max-width:490px)
+{html{
+  font-size: 30%;
+
+}}
+img{
+  height: 8rem;
+}
+@media (max-width:400px){
+  .airbox{
+    width: 20rem;
   }
 }
