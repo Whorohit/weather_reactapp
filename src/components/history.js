@@ -10,7 +10,7 @@ export default function Forcast() {
   const [location, setLocation] = useState({})
   const [forecast, setForecast] = useState([])
   const currentweather = () => {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=3215b3263645467f91c100950232905&q=${city}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=3215b3263645467f91c100950232905&q=${city}`)
       .then(res => res.json())
       .then(data => {
         setCurrent(data.current)
@@ -31,7 +31,7 @@ export default function Forcast() {
     // Generate yyyy-mm-dd date string
     let formattedDateend = year + "-" + month + "-" + (day - 1);
     let formattedDatestart = year + "-" + month + "-" + (day - 3);
-    fetch(`http://api.weatherapi.com/v1/history.json?key=3215b3263645467f91c100950232905&q=london&dt=${formattedDatestart}&end_dt=${formattedDateend}`)
+    fetch(`https://api.weatherapi.com/v1/history.json?key=3215b3263645467f91c100950232905&q=london&dt=${formattedDatestart}&end_dt=${formattedDateend}`)
       .then(res => res.json())
       .then(data => {
         setLocation(data.location)
@@ -55,7 +55,7 @@ export default function Forcast() {
     // Generate yyyy-mm-dd date string
     let formattedDateend = year + "-" + month + "-" + (day - 1);
     let formattedDatestart = year + "-" + month + "-" + (day - 3);
-    fetch(`http://api.weatherapi.com/v1/history.json?key=3215b3263645467f91c100950232905&q=${city}&dt=${formattedDatestart}&end_dt=${formattedDateend}`)
+    fetch(`https://api.weatherapi.com/v1/history.json?key=3215b3263645467f91c100950232905&q=${city}&dt=${formattedDatestart}&end_dt=${formattedDateend}`)
       .then(res => res.json())
       .then(data => {
         setLocation(data.location)

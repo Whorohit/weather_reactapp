@@ -7,13 +7,18 @@ export default function Home() {
   const [location, setLocation] = useState({})
   const [city, setCity] = useState('London')
   useEffect(() => {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=3215b3263645467f91c100950232905&q=${city}`)
-      .then(res => res.json())
-      .then(data => {
-        setCurrent(data.current)
-        setLocation(data.location)
-       console.log(data.location)
-      })
+    try {
+
+      fetch(`https://api.weatherapi.com/v1/current.json?key=3215b3263645467f91c100950232905&q=${city}`)
+        .then(res => res.json())
+        .then(data => {
+          setCurrent(data.current)
+          setLocation(data.location)
+          console.log(data.location)
+        })
+    } catch (error) {
+
+    }
 
   }
     , [])
@@ -21,13 +26,18 @@ export default function Home() {
     setCity(event.target.value)
   }
   const click = () => {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=3215b3263645467f91c100950232905&q=${city}`)
-    .then(res => res.json())
-    .then(data => {
-      setCurrent(data.current)
-      setLocation(data.location)
-     console.log(data.location)
-    })
+    try {
+
+      fetch(`https://api.weatherapi.com/v1/current.json?key=3215b3263645467f91c100950232905&q=${city}`)
+        .then(res => res.json())
+        .then(data => {
+          setCurrent(data.current)
+          setLocation(data.location)
+          console.log(data.location)
+        })
+    } catch (error) {
+
+    }
   }
   return (
     <>
@@ -49,33 +59,33 @@ export default function Home() {
                     last updated on:
                   </h4>
                   <h3 className="smallimg">
-                  {current.last_updated}
+                    {current.last_updated}
                   </h3>
                 </div>
                 <div className=" fw-bold my-1">
-                   <h3 className='cityname fw-bolder text-center '> {city}</h3>
-                   <h3 className='sit  fw-bolder text-center '>{location.country}</h3>
+                  <h3 className='cityname fw-bolder text-center '> {city}</h3>
+                  <h3 className='sit  fw-bolder text-center '>{location.country}</h3>
                 </div>
-              <div class='box'>
-              <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="" />
-              </div>
-              <div className='imgbelow d-flex justify-content-around  my-3 fw-bold'>
-                    <h4 className="imgbline fw-bold">
+                <div class='box'>
+                  <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="" />
+                </div>
+                <div className='imgbelow d-flex justify-content-around  my-3 fw-bold'>
+                  <h4 className="imgbline fw-bold">
                     Temp <span className='fw-bold'>(&#8451;)</span>
-                    </h4>
-                    <h4 className="imgbline fw-bold">
+                  </h4>
+                  <h4 className="imgbline fw-bold">
                     Temp<span className="fw-bold">(&#8457;)</span>
-                    </h4>
-              </div>
-              <div className='imgbelow d-flex justify-content-around  my-3 fw-bold'>
-                    <h4 className="imgbline fw-bold">
-                      {current.temp_c}  <span className='fw-bold'>&#8451;</span>
-                    </h4>
-                    <h4 className="imgbline fw-bold">
-                      {current.temp_f} <span className="fw-bold">&#8457;</span>
-                    </h4>
-              </div>
-                 
+                  </h4>
+                </div>
+                <div className='imgbelow d-flex justify-content-around  my-3 fw-bold'>
+                  <h4 className="imgbline fw-bold">
+                    {current.temp_c}  <span className='fw-bold'>&#8451;</span>
+                  </h4>
+                  <h4 className="imgbline fw-bold">
+                    {current.temp_f} <span className="fw-bold">&#8457;</span>
+                  </h4>
+                </div>
+
               </div>
             </div>
           </div>

@@ -6,12 +6,12 @@ export default function Forcast() {
   const [icon, setIcon] = useState('')
   const [current, setCurrent] = useState({})
   const [city, setCity] = useState('Kolkata ')
-  const inputcity = useRef(null);
+  const inputcity = useRef(' ');
   const [location, setLocation] = useState({})
   const [forecast, setForecast] = useState([])
 
   useEffect(() => {
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=3215b3263645467f91c100950232905&q=${city}&days=7`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=3215b3263645467f91c100950232905&q=${city}&days=7`)
       .then(res => res.json())
       .then(data => {
         setCurrent(data.current)
@@ -25,7 +25,7 @@ export default function Forcast() {
 
   const click = () => {
     setCity(inputcity.current.value)
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=3215b3263645467f91c100950232905&q=${city}&days=7`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=3215b3263645467f91c100950232905&q=${city}&days=7`)
     .then(res => res.json())
     .then(data => {
       setCurrent(data.current)
